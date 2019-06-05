@@ -7,7 +7,7 @@ about the other alternative that was suggested:
  [pytest-subtests][pytest-subtests].
 
  I implemented a short test suite to investigate how good a solution
- usin [`pytest-subtests` + `asyncio`][asyncio_test.py] (resp. [`pytest-subtests` + `trio`][trio_test.py]) would be.
+ usin [`pytest-subtests` + `asyncio`](asyncio_test.py) (resp. [`pytest-subtests` + `trio`](trio_test.py)) would be.
 
  Here is what the output of `pytest -v` looks like:
 
