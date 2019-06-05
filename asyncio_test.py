@@ -48,5 +48,5 @@ async def assert_sleep_duration_ok(duration, fail=False):
     start = time.time()
     await asyncio.sleep(duration)
     actual_duration = time.time() - start
-    assert abs(actual_duration - duration) < accepted_error
+    assert abs(actual_duration - duration) < MAX_ERROR
     assert not fail
