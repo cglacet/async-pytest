@@ -30,8 +30,6 @@ async def tests(subtests):
 
 
 
-accepted_error = 0.1
-
 async def io_test_1():
     await assert_sleep_duration_ok(1)
 
@@ -42,10 +40,13 @@ async def io_test_3():
     await assert_sleep_duration_ok(3)
 
 async def io_test_4():
-    await assert_sleep_duration_ok(4)
+    await assert_sleep_duration_ok(4, fail=True)
 
-async def assert_sleep_duration_ok(duration):
+MAX_ERROR = 0.1
+
+async def assert_sleep_duration_ok(duration, fail=False):
     start = time.time()
     await asyncio.sleep(duration)
     actual_duration = time.time() - start
     assert abs(actual_duration - duration) < accepted_error
+    assert not fail

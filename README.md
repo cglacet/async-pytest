@@ -12,25 +12,25 @@ about the other alternative that was suggested:
  Here is what the output of `pytest -v` looks like:
 
  ```
-============================  test session starts ============================
+===================================== test session starts =====================================
 platform darwin -- Python 3.7.0, pytest-4.6.2, py-1.8.0, pluggy-0.12.0
 cachedir: .pytest_cache
 rootdir: /Users/cglacet/test/async-tests
 plugins: asyncio-0.10.0, trio-0.5.2, subtests-0.2.1
 collected 2 items
 
-asyncio_test.py::tests PASSED                                           [ 50%]
-asyncio_test.py::tests PASSED                                           [ 50%]
-asyncio_test.py::tests PASSED                                           [ 50%]
-asyncio_test.py::tests PASSED                                           [ 50%]
-asyncio_test.py::tests PASSED                                           [ 50%]
-trio_test.py::tests PASSED                                              [100%]
-trio_test.py::tests PASSED                                              [100%]
-trio_test.py::tests PASSED                                              [100%]
-trio_test.py::tests PASSED                                              [100%]
-trio_test.py::tests PASSED                                              [100%]
+asyncio_test.py::tests PASSED                                                           [ 50%]
+asyncio_test.py::tests PASSED                                                           [ 50%]
+asyncio_test.py::tests PASSED                                                           [ 50%]
+asyncio_test.py::tests FAILED                                                           [ 50%]
+asyncio_test.py::tests PASSED                                                           [ 50%]
+trio_test.py::tests PASSED                                                              [100%]
+trio_test.py::tests PASSED                                                              [100%]
+trio_test.py::tests PASSED                                                              [100%]
+trio_test.py::tests FAILED                                                              [100%]
+trio_test.py::tests PASSED                                                              [100%]
 
-========================== 2 passed in 8.06 seconds ==========================
+========================================== FAILURES ===========================================
  ```
 
  Goals:
