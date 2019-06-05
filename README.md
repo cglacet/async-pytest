@@ -1,13 +1,13 @@
 # Investigating asynchronous tests using pytest
 
-The goal is to run several tests concurrently using asyncio (/curio/trio/...) together with pytest.
+The goal is to [run tests concurrently][origin] using asyncio (/curio/trio/...) together with pytest.
 
 Comments suggested to use [pytest-xdist][pytest-xdist] (a thread based solution) but I was curious
 about the other alternative that was suggested:
  [pytest-subtests][pytest-subtests].
 
  I implemented a short test suite to investigate how good a solution
- usin [`pytest-subtests` + `asyncio`](asyncio_test.py) (resp. [`pytest-subtests` + `trio`](trio_test.py)) would be.
+ using [`pytest-subtests` + `asyncio`](asyncio_test.py) (resp. [`pytest-subtests` + `trio`](trio_test.py)) would be.
 
  Here is what the output of `pytest -v` looks like:
 
@@ -37,5 +37,6 @@ trio_test.py::tests PASSED                                              [100%]
   - Have a cleaner output with subtests names and more accurate progression percentage.
   - Try more complex examples.
 
+[origin]: https://stackoverflow.com/q/56448398/1720199
 [pytest-xdist]: https://pypi.org/project/pytest-xdist/
 [pytest-subtests]: https://pypi.org/project/pytest-subtests/
