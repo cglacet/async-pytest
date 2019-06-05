@@ -1,4 +1,4 @@
-# Investigating synchronous tests using pytest
+# Investigating asynchronous tests using pytest
 
 The goal is to run several tests concurrently using asyncio (/curio/trio/...) together with pytest.
 
